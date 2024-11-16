@@ -17,6 +17,13 @@ public class logsnap : MonoBehaviour
     [SerializeField]
     private PuzzleManager puzzleManager;
 
+    private GameObject last_selected_key;
+
+    Dictionary<int, Color> key_color_mappings = new Dictionary<int, Color> {
+        {1, Color.red},
+        {2, Color.blue},
+        {3, Color.green }};
+
     public void GetSelectingInteractorId()
     {
         // Get all of the interactors that are currently selecting
@@ -27,49 +34,78 @@ public class logsnap : MonoBehaviour
             foreach (IInteractorView interactorView in snapinteractable.SelectingInteractorViews)
             {
                 GameObject key = interactorView.Data as MonoBehaviour ? ( (MonoBehaviour)interactorView.Data).gameObject : null;
-                GameObject parent = transform.parent.gameObject;
-                Transform interactable_plane_tranform = parent.transform.Find("Plane");
+                last_selected_key = key.transform.parent.gameObject;
+                Transform interactable_plane_tranform = transform.parent.transform.Find("Plane");
                 
                 if (interactable_plane_tranform != null)
                 {
                     Renderer renderer = interactable_plane_tranform.gameObject.GetComponent<Renderer>();
                     if (renderer != null)
                     {
-                        renderer.material.color = Color.red;
+                        key_script keyscript = key.transform.parent.gameObject.GetComponent<key_script>();
+                        int keyscript_id = keyscript.key_id;
+                        renderer.material.color = key_color_mappings.GetValueOrDefault(keyscript_id);
+                        ChangeColor(key_color_mappings.GetValueOrDefault(keyscript_id));
                     }
                 }
 
                 if (puzzleManager != null)
                 {
                     key_script keyscript = key.transform.parent.gameObject.GetComponent<key_script>();
-                    Debug.Log("parent name is : " + key.transform.parent.gameObject.name);
 
                     if (keyscript != null)
                     {
                         Debug.Log("keyscript is not null");
                         int keyscript_id = keyscript.key_id;
-                        puzzleManager.update_current_state(snapinteractable_id, keyscript_id);
+                        bool isCorrect;
 
-                        if(keyscript_id == 1)
-                        {
-                            ChangeColor(Color.red);
-                        }
+                        isCorrect = puzzleManager.update_current_state(snapinteractable_id, keyscript_id);
 
-                        else if (keyscript_id == 2)
+                        ChangeInteractableColor(keyscript_id);
+                        if(isCorrect)
                         {
-                            ChangeColor(Color.blue);
+                            ChangeInteractorVisual(true);
                         }
-
-                        else if (keyscript_id == 3)
-                        {
-                            ChangeColor(Color.green);
-                        }
+                        
                     }
-
                     
                 }
             }
         }
+    }
+
+    void ChangeInteractorVisual(bool isCorrect)
+    {
+
+        //Debug.Log("key name is : " + last_selected_key.name);
+        GameObject Capsule_filler = last_selected_key.transform.Find("Capsule_filler").gameObject;
+
+        //foreach(Transform child in last_selected_key.transform.)
+
+        Material material = Capsule_filler.GetComponent<MeshRenderer>().material;
+
+        Vector2 new_value;
+        float pulse_speed;
+        if(isCorrect)
+        {
+            new_value = new Vector2(0.0f, 1.0f);
+            pulse_speed = 5.0f;
+        }
+
+        else
+        {
+            new_value = new Vector2(0.75f, 1.0f);
+            pulse_speed = 0.0f;
+        }
+
+        material.SetVector("_Remap_in_out", new_value);
+        material.SetFloat("_PulseSpeed", pulse_speed);
+    }
+
+        
+    void ChangeInteractableColor(int keyscript_id)
+    {
+        ChangeColor(key_color_mappings.GetValueOrDefault(keyscript_id));
     }
 
     public void onDeselect()
@@ -82,13 +118,15 @@ public class logsnap : MonoBehaviour
             Renderer renderer = interactable_plane_tranform.gameObject.GetComponent<Renderer>();
             if (renderer != null)
             {
-                renderer.material.color = default_color;
+                //renderer.material.color = default_color;
+                ChangeColor(default_color);
             }
         }
 
         if(puzzleManager != null)
         {
             puzzleManager.update_current_state(snapinteractable_id, -1);
+            ChangeInteractorVisual(false);
         }
     }
 
@@ -102,7 +140,8 @@ public class logsnap : MonoBehaviour
             Renderer renderer = interactable_plane_tranform.gameObject.GetComponent<Renderer>();
             if (renderer != null)
             {
-                renderer.material.color = color;
+                renderer.material.SetColor("_KeyCoreColor", color);
+                //renderer.material.color = color;
             }
         }
     }

@@ -62,10 +62,12 @@ public class PuzzleManager : MonoBehaviour
     }
 
     //Updates a particular State
-    public void update_current_state(int a, int b)
+    public bool update_current_state(int a, int b)
     {
         current_state[a] = b;
         check_states();
+
+        return current_state[a] == required_states[a];
     }
 
     //checks all the states, and print if puzzle is solved.
