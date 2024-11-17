@@ -84,7 +84,7 @@ public class PuzzleManager : MonoBehaviour
 
         if(correct_count == 3)
         {
-            Debug.Log("You have solved Advait's puzzle");
+            //Debug.Log("You have solved Advait's puzzle");
             winText.text = "You have solved Advait's puzzle!!";
         }
 

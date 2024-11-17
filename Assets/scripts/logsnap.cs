@@ -30,6 +30,7 @@ public class logsnap : MonoBehaviour
         if (snapinteractable.SelectingInteractorViews.Any())
         {
             
+            
             //Debug.Log("Selecting interactor with id ");
             foreach (IInteractorView interactorView in snapinteractable.SelectingInteractorViews)
             {
@@ -39,6 +40,7 @@ public class logsnap : MonoBehaviour
                 
                 if (interactable_plane_tranform != null)
                 {
+                    SoundFXManager.instance.PlaySetClip(1, transform, 1.0f);
                     Renderer renderer = interactable_plane_tranform.gameObject.GetComponent<Renderer>();
                     if (renderer != null)
                     {
@@ -110,9 +112,13 @@ public class logsnap : MonoBehaviour
 
     public void onDeselect()
     {
+        if (!Application.isPlaying) return;
         GameObject parent = transform.parent.gameObject;
         Transform interactable_plane_tranform = parent.transform.Find("Plane");
-        
+
+
+        SoundFXManager.instance.PlaySetClip(0, transform, 1.0f);
+
         if (interactable_plane_tranform != null)
         {
             Renderer renderer = interactable_plane_tranform.gameObject.GetComponent<Renderer>();
