@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/advait_mach_1.unity
     guid: b8d09e10cfdcb4a2f89288c844adc665
+  - enabled: 1
+    path: Assets/Scenes/game_scene.unity
+    guid: 96f0c185950fb482194db3136c59aecb
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 3e4a61a698d6f4034b3848013e2e0d8b,
       type: 2}
