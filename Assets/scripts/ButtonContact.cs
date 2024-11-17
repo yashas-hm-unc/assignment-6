@@ -7,9 +7,9 @@ public class ButtonContact : MonoBehaviour
 {
     public Button button; // Assign the button in the Inspector
 
-
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-            button.onClick.Invoke(); // Trigger the button's OnClick() event
+        button.onClick.Invoke();
     }
+    
 }

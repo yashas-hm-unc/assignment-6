@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 public class DigitNumberScript : MonoBehaviour
 {
-    public TextMeshProUGUI codeTextValue;
+    public TextMeshPro codeTextValue;
 
     public void addDigit(string digit)
     {
