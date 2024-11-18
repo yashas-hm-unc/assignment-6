@@ -1133,7 +1133,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   shuffle_interval: 45
-  puzzlecandle1: {fileID: 0}
+  puzzlecandle1: {fileID: 1971025910}
 --- !u!4 &216066344
 Transform:
   m_ObjectHideFlags: 0
@@ -5299,6 +5299,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92dc703ce90464e7d9cdc32a1ee9fe4a, type: 3}
+--- !u!1 &1971025910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5595336094133137628, guid: 92dc703ce90464e7d9cdc32a1ee9fe4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1971025909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1971025911 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 271970572924847613, guid: 92dc703ce90464e7d9cdc32a1ee9fe4a,

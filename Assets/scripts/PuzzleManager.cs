@@ -41,6 +41,9 @@ public class PuzzleManager : MonoBehaviour
     void Update()
     {
         curr_timer += Time.deltaTime;
+
+        winText.text = "Timer : " + curr_timer.ToString("F");
+
         if(Time.time > next_shuffle_time)
         {
             Shuffle_Assignments();
