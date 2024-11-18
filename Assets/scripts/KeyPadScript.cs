@@ -12,25 +12,25 @@ public class KeyPadScript : MonoBehaviour
     private bool stop = false;
 
 
-    void Update()
-    {
-        if (stop)
-            return;
+    //void Update()
+    //{
+    //    if (stop)
+    //        return;
 
-        //finish_manager.instance.finished_puzzle();
-        finish_manager finish_script = finish_manager_go.GetComponent<finish_manager>();
-        finish_script.finished_puzzle();
-        digitNumber.addDigit("C");
-        digitNumber.addDigit("Good job!");
-        // update state of overall game, as this puzzle has been solved
-        puzzlecandle2.transform.Find("Point Light").gameObject.SetActive(true);
-        puzzlecandle2.transform.Find("Particle System").gameObject.SetActive(true);
-        stop = true;
-    }
+    //    //finish_manager.instance.finished_puzzle();
+    //    finish_manager finish_script = finish_manager_go.GetComponent<finish_manager>();
+    //    finish_script.finished_puzzle();
+    //    digitNumber.addDigit("C");
+    //    digitNumber.addDigit("Good job!");
+    //    // update state of overall game, as this puzzle has been solved
+    //    puzzlecandle2.transform.Find("Point Light").gameObject.SetActive(true);
+    //    puzzlecandle2.transform.Find("Particle System").gameObject.SetActive(true);
+    //    stop = true;
+    //}
 
     public void PressEnter()
     {
-        if (digitNumber.getDigit() == "042" || temp == 0)
+        if (digitNumber.getDigit() == "042")
         {
             if (stop)
                 return;

@@ -29,7 +29,7 @@ public class GestureHandler : MonoBehaviour
     [ContextMenu("check_candle")]
     void updateState()
     {
-        stage = solveState.Count;
+        //stage = solveState.Count;
         if (stage < solveState.Count)
         {
             if (gestureState[solveState[stage + 1][0]] && gestureState[solveState[stage + 1][1]])
