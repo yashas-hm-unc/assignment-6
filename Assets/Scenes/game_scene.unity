@@ -3078,7 +3078,7 @@ PrefabInstance:
     - target: {fileID: 703928222072564884, guid: 575623c9776094977a10cabd46c44710,
         type: 3}
       propertyPath: tp_distance
-      value: 0.2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4644094727250623865, guid: 575623c9776094977a10cabd46c44710,
         type: 3}
@@ -3843,7 +3843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1350233247
 Transform:
   m_ObjectHideFlags: 0
