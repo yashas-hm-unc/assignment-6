@@ -1,5 +1,5 @@
 ## Things to know for testing:
-We used Meta XR SDK, and you will need XR Core Utilities, XR Plugin Management, Oculus XR Plugin, and OpenXR Plugin, as well asSketchfab for Unity.
+We used Meta XR SDK, and you will need XR Core Utilities, XR Plugin Management, Oculus XR Plugin, and OpenXR Plugin, as well as Sketchfab for Unity.
 
 ## Resources used:
 https://www.youtube.com/watch?v=OaPQPY_wuzk
