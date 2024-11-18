@@ -7042,6 +7042,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Escape Room
       objectReference: {fileID: 0}
+    - target: {fileID: 8552129313203918355, guid: bcfe66771f93048548db2d8632ccfc04,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 8553986409785821886, guid: bcfe66771f93048548db2d8632ccfc04,
         type: 3}
       propertyPath: m_Convex
