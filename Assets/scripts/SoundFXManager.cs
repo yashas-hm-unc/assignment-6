@@ -16,6 +16,12 @@ public class SoundFXManager : MonoBehaviour
     [SerializeField]
     private AudioClip button_press;
 
+    [SerializeField]
+    private AudioClip jutsu_effect;
+
+    [SerializeField]
+    private AudioClip hand_sign;
+
 
     private bool isQuitting;
 
@@ -65,6 +71,10 @@ public class SoundFXManager : MonoBehaviour
             audiosource.clip = key_snap_interact;
         else if(idx == 2)
             audiosource.clip = button_press;
+        else if (idx == 3)
+            audiosource.clip = jutsu_effect;
+        else if (idx == 4)
+            audiosource.clip = hand_sign;
 
         //set volume
         audiosource.volume = volume;
