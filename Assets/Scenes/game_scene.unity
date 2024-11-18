@@ -4126,6 +4126,137 @@ MonoBehaviour:
   default_color: {r: 0, g: 0, b: 0, a: 0}
   snapinteractable_id: 0
   puzzleManager: {fileID: 0}
+--- !u!1001 &1700641921
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.822
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.751
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.429
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8092149679063006230, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: m_Name
+      value: CodePuzzle
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4710027003544188371, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 8191609496469837732, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 1627875828704112939, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 9090487250311769812, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5239386156153573387, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2729609457313451211, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2487658682653039965, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 2662144029194448023, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 817493487789914490, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 6256387288320087893, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 4743831330441904841, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 3316045439376462523, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: f8f3115a4d98945d589755c062d24c85, type: 3}
 --- !u!1 &1723775964
 GameObject:
   m_ObjectHideFlags: 0
@@ -5520,3 +5651,4 @@ SceneRoots:
   - {fileID: 2117927514}
   - {fileID: 766393150}
   - {fileID: 1219532952}
+  - {fileID: 1700641921}
