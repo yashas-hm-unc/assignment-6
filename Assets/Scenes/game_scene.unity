@@ -1171,6 +1171,7 @@ MonoBehaviour:
   - {fileID: 0}
   shuffle_interval: 60
   puzzlecandle1: {fileID: 1971025910}
+  finish_manager_go: {fileID: 1812682826}
 --- !u!4 &216066344
 Transform:
   m_ObjectHideFlags: 0
@@ -2651,6 +2652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frameLimit: 50
+  puzzlecandle3: {fileID: 1234777451}
+  finish_manager_go: {fileID: 1812682826}
 --- !u!4 &904407001
 Transform:
   m_ObjectHideFlags: 0
@@ -3710,6 +3713,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1234777449}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1234777451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5595336094133137628, guid: 92dc703ce90464e7d9cdc32a1ee9fe4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1234777449}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1257041721
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,7 +3843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1350233247
 Transform:
   m_ObjectHideFlags: 0
@@ -4610,6 +4619,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469137319}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1557986500
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1557986501}
+  m_Layer: 0
+  m_Name: collectible_manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1557986501
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557986500}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1570696223
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5553,6 +5593,11 @@ PrefabInstance:
       propertyPath: puzzlecandle2
       value: 
       objectReference: {fileID: 1739549719}
+    - target: {fileID: 4135780295060995871, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: finish_manager_go
+      value: 
+      objectReference: {fileID: 1812682826}
     - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6250,6 +6295,51 @@ MonoBehaviour:
   _renderer: {fileID: 1786859047}
   _normalColor: {r: 1, g: 0, b: 0, a: 1}
   _selectColor: {r: 0, g: 1, b: 0, a: 1}
+--- !u!1 &1812682826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812682828}
+  - component: {fileID: 1812682827}
+  m_Layer: 0
+  m_Name: finish_manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1812682827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812682826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34cc9c5b4be6a4e219bfe0857182ae57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winText: {fileID: 1861226042}
+--- !u!4 &1812682828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812682826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.30087605, y: 0.82594687, z: 0.41604578}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861226040
 GameObject:
   m_ObjectHideFlags: 0
@@ -7885,4 +7975,6 @@ SceneRoots:
   - {fileID: 1219532952}
   - {fileID: 1700641921}
   - {fileID: 904407001}
+  - {fileID: 1557986501}
   - {fileID: 13128819}
+  - {fileID: 1812682828}

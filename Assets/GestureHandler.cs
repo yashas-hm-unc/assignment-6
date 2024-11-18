@@ -12,6 +12,12 @@ public class GestureHandler : MonoBehaviour
     private int stage = -1;
     public int frameLimit = 50;
     private int frames = 0;
+    private bool stop = false;
+
+    public GameObject puzzlecandle3;
+
+    public GameObject finish_manager_go;
+
     void Start()
     {
         solveState.Add(new List<int> { 0, 4 });
@@ -20,8 +26,10 @@ public class GestureHandler : MonoBehaviour
         //public float gestureThreshold;
     }
 
+    [ContextMenu("check_candle")]
     void updateState()
     {
+        stage = solveState.Count;
         if (stage < solveState.Count)
         {
             if (gestureState[solveState[stage + 1][0]] && gestureState[solveState[stage + 1][1]])
@@ -33,7 +41,18 @@ public class GestureHandler : MonoBehaviour
         }
         if (stage == solveState.Count)
         {
+            if (stop)
+                return;
+            stop = true;
             SoundFXManager.instance.PlaySetClip(3, transform, 1.0f);
+
+            puzzlecandle3.transform.Find("Point Light").gameObject.SetActive(true);
+            puzzlecandle3.transform.Find("Particle System").gameObject.SetActive(true);
+
+            finish_manager finish_script = finish_manager_go.GetComponent<finish_manager>();
+            finish_script.finished_puzzle();
+
+
             stage = -1;
             frames = 0;
         }

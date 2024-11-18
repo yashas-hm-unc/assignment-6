@@ -19,19 +19,21 @@ public class PuzzleManager : MonoBehaviour
     [SerializeField]
     public SnapInteractor[] snap_interactors;
 
-    private float curr_timer;
-
     public float shuffle_interval;
     private float next_shuffle_time = 0.0f;
     private int correct_count;
 
+    private bool stop = false;
+
     public GameObject puzzlecandle1;
+
+    public GameObject finish_manager_go;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        curr_timer = 0.0f;
+        
         correct_count = 0;
         required_states = new int[] { 1, 2, 3, 4 };
         current_state = new int[] { -1, -1, -1, -1 };
@@ -40,9 +42,6 @@ public class PuzzleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        curr_timer += Time.deltaTime;
-
-        winText.text = "Timer : " + curr_timer.ToString("F");
 
         if(Time.time > next_shuffle_time)
         {
@@ -69,6 +68,7 @@ public class PuzzleManager : MonoBehaviour
     //Updates a particular State
     public bool update_current_state(int a, int b)
     {
+        
         current_state[a] = b;
         check_states();
 
@@ -78,6 +78,8 @@ public class PuzzleManager : MonoBehaviour
     //checks all the states, and print if puzzle is solved.
     void check_states()
     {
+        if (stop)
+            return;
         correct_count = 0;
         for(int i=0; i <required_states.Length; i++)
         {
@@ -92,8 +94,15 @@ public class PuzzleManager : MonoBehaviour
             //Debug.Log("You have solved Advait's puzzle");
             //winText.text = "You have solved Advait's puzzle!!";
 
+            stop = true;
+
             puzzlecandle1.transform.Find("Point Light").gameObject.SetActive(true);
             puzzlecandle1.transform.Find("Particle System").gameObject.SetActive(true);
+
+            finish_manager finish_script = finish_manager_go.GetComponent<finish_manager>();
+            finish_script.finished_puzzle();
+
+            //finish_manager.instance.finished_puzzle();
 
         }
 
