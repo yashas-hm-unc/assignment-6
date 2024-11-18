@@ -10,7 +10,7 @@ public class GestureHandler : MonoBehaviour
     private bool[] gestureState = { false, false, false, false, false };
     List<List<int>> solveState = new List<List<int>>();
     private int stage = -1;
-    public int frameLimit = 50;
+    public int frameLimit = 500;
     private int frames = 0;
     private bool stop = false;
 
@@ -22,7 +22,7 @@ public class GestureHandler : MonoBehaviour
     {
         solveState.Add(new List<int> { 0, 4 });
         solveState.Add(new List<int> { 3, 1 });
-        solveState.Add(new List<int> { 2, 5 });
+        //solveState.Add(new List<int> { 2, 5 });
         //public float gestureThreshold;
     }
 
@@ -39,7 +39,7 @@ public class GestureHandler : MonoBehaviour
                 frames = 0;
             }
         }
-        if (stage == solveState.Count)
+        if (stage == solveState.Count-1)
         {
             if (stop)
                 return;
@@ -53,7 +53,7 @@ public class GestureHandler : MonoBehaviour
             finish_script.finished_puzzle();
 
 
-            stage = -1;
+            stage = 5;
             frames = 0;
         }
     }
@@ -72,7 +72,7 @@ public class GestureHandler : MonoBehaviour
     void FixedUpdate()
     {
         frames += 1;
-        if (frames >= 50)
+        if (frames >= frameLimit)
         {
             frames = 0;
             stage = -1;
