@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Oculus.Interaction;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PuzzleManager : MonoBehaviour
 {
@@ -24,7 +25,8 @@ public class PuzzleManager : MonoBehaviour
     private float next_shuffle_time = 0.0f;
     private int correct_count;
 
-    public 
+    public GameObject puzzlecandle1;
+
 
     // Start is called before the first frame update
     void Start()
@@ -85,7 +87,11 @@ public class PuzzleManager : MonoBehaviour
         if(correct_count == 3)
         {
             //Debug.Log("You have solved Advait's puzzle");
-            winText.text = "You have solved Advait's puzzle!!";
+            //winText.text = "You have solved Advait's puzzle!!";
+
+            puzzlecandle1.transform.Find("Point Light").gameObject.SetActive(true);
+            puzzlecandle1.transform.Find("Particle System").gameObject.SetActive(true);
+
         }
 
 
