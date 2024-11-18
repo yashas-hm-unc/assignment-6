@@ -4269,6 +4269,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4135780295060995871, guid: f8f3115a4d98945d589755c062d24c85,
+        type: 3}
+      propertyPath: puzzlecandle2
+      value: 
+      objectReference: {fileID: 1739549719}
     - target: {fileID: 5913386891990344981, guid: f8f3115a4d98945d589755c062d24c85,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4574,6 +4579,12 @@ PrefabInstance:
 --- !u!4 &1739549718 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 271970572924847613, guid: 92dc703ce90464e7d9cdc32a1ee9fe4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1739549717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1739549719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5595336094133137628, guid: 92dc703ce90464e7d9cdc32a1ee9fe4a,
     type: 3}
   m_PrefabInstance: {fileID: 1739549717}
   m_PrefabAsset: {fileID: 0}
