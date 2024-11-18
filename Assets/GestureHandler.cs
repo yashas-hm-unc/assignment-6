@@ -9,6 +9,7 @@ public class GestureHandler : MonoBehaviour
     // 3 => Thumbs up right, 4 => Thumbs down right, 5 => Nin right
     private bool[] gestureState = { false, false, false, false, false };
     List<List<int>> solveState = new List<List<int>>();
+    private AudioSource[] audioSources;
     private int stage = -1;
     public int frameLimit = 50;
     private int frames = 0;
@@ -17,6 +18,7 @@ public class GestureHandler : MonoBehaviour
         solveState.Add(new List<int> { 0, 4 });
         solveState.Add(new List<int> { 3, 1 });
         solveState.Add(new List<int> { 2, 5 });
+        audioSources = GetComponents<AudioSource>();
         //public float gestureThreshold;
     }
 
@@ -27,11 +29,13 @@ public class GestureHandler : MonoBehaviour
             if (gestureState[solveState[stage + 1][0]] && gestureState[solveState[stage + 1][1]])
             {
                 stage++;
+                audioSources[0].Play();
                 frames = 0;
             }
         }
         if (stage == solveState.Count)
         {
+            audioSources[1].Play();
             stage = -1;
             frames = 0;
         }
