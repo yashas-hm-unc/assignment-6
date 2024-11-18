@@ -8,6 +8,8 @@ public class DigitNumberScript : MonoBehaviour
 
     public void addDigit(string digit)
     {
+        SoundFXManager.instance.PlaySetClip(2, transform, 1.0f);
+
         if (digit.Equals("Good job!"))
         {
             codeTextValue.text = "Good job!";

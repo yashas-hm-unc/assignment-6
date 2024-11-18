@@ -12,6 +12,11 @@ public class SoundFXManager : MonoBehaviour
 
     [SerializeField]
     private AudioClip key_snap_interact;
+
+    [SerializeField]
+    private AudioClip button_press;
+
+
     private bool isQuitting;
 
     private void Awake()
@@ -58,6 +63,8 @@ public class SoundFXManager : MonoBehaviour
             audiosource.clip = key_pickup;
         else if(idx == 1)
             audiosource.clip = key_snap_interact;
+        else if(idx == 2)
+            audiosource.clip = button_press;
 
         //set volume
         audiosource.volume = volume;

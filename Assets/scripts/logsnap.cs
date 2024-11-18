@@ -112,11 +112,10 @@ public class logsnap : MonoBehaviour
 
     public void onDeselect()
     {
-        if (!Application.isPlaying) return;
         GameObject parent = transform.parent.gameObject;
         Transform interactable_plane_tranform = parent.transform.Find("Plane");
 
-
+        Debug.Log("in deselect");
         SoundFXManager.instance.PlaySetClip(0, transform, 1.0f);
 
         if (interactable_plane_tranform != null)
